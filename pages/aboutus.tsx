@@ -1,0 +1,161 @@
+import Banner from "@/components/Banner";
+import Heading from "@/components/home/Heading";
+import Mainlayout from "@/layouts/Mainlayout";
+import React from "react";
+import { ImQuotesLeft } from "react-icons/im";
+
+const aboutus = () => {
+  return (
+    <Mainlayout>
+      <div>
+        <Banner
+          Heading="About Us"
+          breadcrumb={[
+            {
+              link: "/",
+              title: "Home",
+            },
+            {
+              link: "/",
+              title: "About Us",
+            },
+          ]}
+        />
+        <div className="md:p-16 p-5">
+          <History />
+        </div>
+        <Mission />
+        <div className="md:p-16 p-5">
+          <Message />
+        </div>
+      </div>
+    </Mainlayout>
+  );
+};
+
+const History = () => {
+  return (
+    <div className="md:flex grid md:gap-x-14">
+      <div className="gap-y-6 md:w-[60%] w-full">
+        <Heading title="Our History" />
+        <p className="mt-6 text-justify md:text-start">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
+          praesentium modi natus, dolorum aliquid esse dolores quia voluptate
+          eveniet quo sunt cumque incidunt, voluptatem sit nisi, alias suscipit
+          distinctio quisquam. Lorem ipsum dolor, sit amet consectetur
+          adipisicing elit. Sapiente earum deleniti cum. Est exercitationem in
+          expedita, ducimus repudiandae distinctio aperiam excepturi laborum
+          odit ipsum placeat! Excepturi maxime veniam laborum consequuntur?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eum
+          dolor odit quae provident officiis modi reiciendis fuga. Maxime
+          aliquam adipisci voluptas dolore inventore ipsam numquam. Animi
+          exercitationem maiores amet!
+        </p>
+      </div>
+      <div className="md:w-[40%]">
+        <div className="border-[8px] border-white shadow-2xl">
+          <img
+            src="/img/aboutus/history.jpg"
+            alt=""
+            className="w-full h-[20rem] object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Mission = () => {
+  return (
+    <div className="gap-x-20 justify-between md:flex bg-slate-300 md:p-16 p-5">
+      <div className="md:w-1/2">
+        <h1 className="font-bold text-2xl mb-4 before:w-12 before:h-1 before:bg-brand-color before:absolute relative before:-bottom-2 ">
+          Our Mission
+        </h1>
+        <div className="md:flex gap-x-7 items-center">
+          <div className="gap-y-6 md:w-[60%]">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+              eum dolor odit quae provident officiis modi reiciendis fuga.
+              Maxime aliquam adipisci voluptas dolore inventore ipsam numquam.
+              Animi exercitationem maiores amet!
+            </p>
+          </div>
+          <div className="md:w-[40%]">
+            <div className="border-[8px] border-white shadow-2xl mt-5 md:-mt-5">
+              <img
+                src="/img/aboutus/history.jpg"
+                alt=""
+                className="w-full md:h-[8rem] h-[20rem]  object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="md:w-1/2 mt-5 md:-mt-5">
+        <h1 className="font-bold text-2xl mb-4 before:w-12 before:h-1 before:bg-brand-color before:absolute relative before:-bottom-2 ">
+          Our Value
+        </h1>
+        <div className="md:flex gap-x-7 items-center">
+          <div className="gap-y-6 md:w-[60%]">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+              eum dolor odit quae provident officiis modi reiciendis fuga.
+              Maxime aliquam adipisci voluptas dolore inventore ipsam numquam.
+              Animi exercitationem maiores amet!
+            </p>
+          </div>
+          <div className="md:w-[40%]">
+            <div className="border-[8px] border-white shadow-2xl mt-5 md:-mt-5">
+              <img
+                src="/img/aboutus/history.jpg"
+                alt=""
+                className="md:w-full md:h-[8rem] object-cover h-[20rem] "
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Message = () => {
+  return (
+    <div>
+      <div className="mb-8">
+        <Heading title="A MESSAGE FROM OUR FOUNDER & CEO" />
+      </div>
+      <div className="md:flex gap-x-16 items-center grid grid-cols-1 ">
+        <div className="md:w-[60%] bg-gray-300 md:px-16 px-5 py-8  order-last md:order-first ">
+          <div className="flex justify-center md:mb-8 mb-4">
+            <ImQuotesLeft size={50} />
+          </div>
+          <p className="text-center ">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
+            accusantium accusamus. Nihil ratione reprehenderit nostrum vero
+            pariatur a suscipit quam, inventore sint eius voluptatibus,
+            architecto necessitatibus minus non sunt provident.
+          </p>
+          <div className="text-center mt-8 border-t pt-8">
+            <p className="font-bold text-xl text-brand-color">Pratik Pageni</p>
+            <p className="text-sm">Founder & CEO</p>
+          </div>
+        </div>
+        <div className="md:w-[40%] md:mb-0 mb-5">
+          <div className="border-[6px] border-gray-300 md:shadow-2xl ">
+            <img
+              src="/img/aboutus/ceo.jpg"
+              alt=""
+              className="w-full h-[20rem] object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default aboutus;
