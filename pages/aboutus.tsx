@@ -39,19 +39,18 @@ const History = () => {
       <div className="gap-y-6 md:w-[60%] w-full">
         <Heading title="Our History" />
         <p className="mt-6 text-justify md:text-start">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
-          praesentium modi natus, dolorum aliquid esse dolores quia voluptate
-          eveniet quo sunt cumque incidunt, voluptatem sit nisi, alias suscipit
-          distinctio quisquam. Lorem ipsum dolor, sit amet consectetur
-          adipisicing elit. Sapiente earum deleniti cum. Est exercitationem in
-          expedita, ducimus repudiandae distinctio aperiam excepturi laborum
-          odit ipsum placeat! Excepturi maxime veniam laborum consequuntur?
+          Established in the heart of Nepal, our company began with a clear
+          purpose — to make logistics seamless and dependable across the
+          country. From delivering essential goods to remote villages to
+          managing bulk shipments in Kathmandu, we’ve steadily grown into a name
+          people trust.
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eum
-          dolor odit quae provident officiis modi reiciendis fuga. Maxime
-          aliquam adipisci voluptas dolore inventore ipsam numquam. Animi
-          exercitationem maiores amet!
+          Starting with a small team and local routes, we now operate nationally
+          with a robust network of delivery professionals and infrastructure.
+          Our expansion into international logistics has opened doors for Nepali
+          businesses to connect with global markets — efficiently and
+          affordably.
         </p>
       </div>
       <div className="md:w-[40%]">
@@ -77,10 +76,12 @@ const Mission = () => {
         <div className="md:flex gap-x-7 items-center">
           <div className="gap-y-6 md:w-[60%]">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-              eum dolor odit quae provident officiis modi reiciendis fuga.
-              Maxime aliquam adipisci voluptas dolore inventore ipsam numquam.
-              Animi exercitationem maiores amet!
+              We aim to simplify logistics for our customers by offering fast,
+              secure, and cost-effective delivery solutions. Whether it's a
+              same-day parcel or international shipment, our mission is to
+              ensure every package reaches its destination safely and on time.
+              We continuously strive to innovate and exceed customer
+              expectations by embracing technology and sustainable practices.
             </p>
           </div>
           <div className="md:w-[40%]">
@@ -94,17 +95,19 @@ const Mission = () => {
           </div>
         </div>
       </div>
-      <div className="md:w-1/2 mt-5 md:-mt-5">
+      <div className="md:w-1/2 mt-5 md:mt-0">
         <h1 className="font-bold text-2xl mb-4 before:w-12 before:h-1 before:bg-brand-color before:absolute relative before:-bottom-2 ">
           Our Value
         </h1>
         <div className="md:flex gap-x-7 items-center">
           <div className="gap-y-6 md:w-[60%]">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-              eum dolor odit quae provident officiis modi reiciendis fuga.
-              Maxime aliquam adipisci voluptas dolore inventore ipsam numquam.
-              Animi exercitationem maiores amet!
+              Integrity, reliability, and customer focus are the core values
+              that guide our company. We believe in building long-term
+              relationships with our clients through transparency and
+              exceptional service. Our dedicated team works tirelessly to uphold
+              these values and deliver an experience that goes beyond
+              transportation.
             </p>
           </div>
           <div className="md:w-[40%]">
@@ -134,11 +137,13 @@ const Message = () => {
             <ImQuotesLeft size={50} />
           </div>
           <p className="text-center ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
-            accusantium accusamus. Nihil ratione reprehenderit nostrum vero
-            pariatur a suscipit quam, inventore sint eius voluptatibus,
-            architecto necessitatibus minus non sunt provident.
+            “We started this company with a single goal in mind — to make
+            delivery services faster, easier, and more accessible for everyone.
+            Today, I’m proud to see how far we've come. But our journey doesn't
+            end here. We’re committed to growing with our customers and
+            continuing to improve how the world ships and receives goods.”
           </p>
+
           <div className="text-center mt-8 border-t pt-8">
             <p className="font-bold text-xl text-brand-color">Pratik Pageni</p>
             <p className="text-sm">Founder & CEO</p>

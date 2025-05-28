@@ -3,7 +3,7 @@ import HomeService from "@/components/home/HomeService";
 import ShipmentStatus from "@/components/home/ShipmentStatus";
 import WorkCard from "@/components/home/WorkCard";
 import Mainlayout from "@/layouts/Mainlayout";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import { HiArrowLongRight } from "react-icons/hi2";
 
@@ -11,7 +11,7 @@ const home = () => {
   return (
     <Mainlayout>
       <Tracker />
-      <div className="py-20 grid grid-cols-1  gap-y-16">
+      <div className="py-20 grid grid-cols-1 gap-y-16">
         <div className="md:px-16 px-5 ">
           <Experience />
         </div>
@@ -27,13 +27,20 @@ const home = () => {
 const Tracker = () => {
   const [tracknumber, setTracknumber] = useState<number>(Number);
   const [show, setShow] = useState<boolean>(false);
+  const [fadeIn, setFadeIn] = useState<boolean>(false);
+
+  useEffect(() => {
+    // Trigger fade-in animation on component mount
+    setFadeIn(true);
+  }, []);
+
   const track = () => {};
   return (
-    <div>
+    <div className={`transition-opacity duration-1000 ${fadeIn ? "opacity-100" : "opacity-0"}`}>
       <div className="bg-[url('/img/home/home.jpg')] bg-cover bg-center w-full md:h-[85vh] h-[70vh]">
-        <div className="md:p-24 p-10  ">
-          <div className="md:w-[40%] ">
-            <h1 className="font-bold text-5xl text-brand-color stroke-white ">
+        <div className="md:p-24 p-10">
+          <div className="md:w-[40%]">
+            <h1 className="font-bold text-5xl text-brand-color stroke-white">
               Track Your Package
             </h1>
             <div className="bg-white px-4 py-2 rounded-lg w-full mt-10 flex gap-x-2">
@@ -50,27 +57,62 @@ const Tracker = () => {
               />
               <button
                 onClick={() => setShow(true)}
-                className="bg-brand-color px-3 py-1 rounded-xl text-white
-              "
+                className="bg-brand-color px-3 py-1 rounded-xl text-white"
               >
                 Track
               </button>
-              {/* <div className={`${show ? "block" : "hidden"}`}>
-                <ShipmentStatus setShow={setShow} />
-              </div> */}
               {show && <ShipmentStatus setShow={setShow} />}
             </div>
 
-            <div className="  justify-center flex">
+            <div className="justify-center flex">
               <img
                 src="img/home/scooter.png"
                 alt="scooter photo"
-                className="object-cover md:h-[45vh]   "
+                className="object-cover md:h-[45vh] scooter-updown-animation"
               />
             </div>
           </div>
         </div>
       </div>
+     <style jsx>{`
+        @keyframes ride-updown {
+          0%, 100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-15px);
+          }
+        }
+        .scooter-updown-animation {
+          animation: ride-updown 2s ease-in-out infinite;
+        }
+        /* Wind effect background setup */
+        .wind-effect {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          overflow: hidden;
+          z-index: 1;
+          background: repeating-linear-gradient(
+            45deg,
+            rgba(255 255 255 / 0.07),
+            rgba(255 255 255 / 0.07) 2px,
+            rgba(255 255 255 / 0.15) 4px
+          );
+          animation: wind-move 6s linear infinite;
+        }
+        @keyframes wind-move {
+          0% {
+            background-position: 0 0;
+          }
+          100% {
+            background-position: 100px 0;
+          }
+        }
+      `}</style>
     </div>
   );
 };
@@ -86,36 +128,36 @@ const Experience = () => {
           </div>
           <Heading title="YEARS OF EXPERIENCE" />
           <p className="mt-8">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum Consect petur adipiscing elit eu fugiat nulla
-            pariatur Excepteur sint occaecat.
+            Udaan Worldwide Courier Services is the most reliable and
+            trustworthy courier service across World. We provide the easiest,
+            fastest, most affordable, and time-definite delivery of parcels. We
+            help you reach your personal, professional, and private courier
+            packages with complete satisfaction.
           </p>
-          <div className="grid grid-cols-2 mt-10 gap-y-2">
-            <div className="flex items-center  ">
-              <FaCheckCircle />
-              <p className="ml-3">24 -Hours Services</p>
+          <div className="grid grid-cols-2 mt-10 gap-y-4">
+            <div className="flex items-center">
+              <FaCheckCircle className="text-green-500" />
+              <p className="ml-3">Same-Day Delivery</p>
             </div>
-            <div className="flex items-center ">
-              <FaCheckCircle />
-              <p className="ml-3">24 -Hours Services</p>
+            <div className="flex items-center">
+              <FaCheckCircle className="text-green-500" />
+              <p className="ml-3">Real-Time Tracking</p>
             </div>
-            <div className="flex items-center ">
-              <FaCheckCircle />
-              <p className="ml-3">No Travel Charges</p>
+            <div className="flex items-center">
+              <FaCheckCircle className="text-green-500" />
+              <p className="ml-3">Doorstep Pickup</p>
             </div>
-            <div className="flex items-center ">
-              <FaCheckCircle />
-              <p className="ml-3">No Travel Charges</p>
+            <div className="flex items-center">
+              <FaCheckCircle className="text-green-500" />
+              <p className="ml-3">Nationwide Coverage</p>
             </div>
-            <div className="flex items-center ">
-              <FaCheckCircle />
-              <p className="ml-3">Free Estimates</p>
+            <div className="flex items-center">
+              <FaCheckCircle className="text-green-500" />
+              <p className="ml-3">Competitive Rates</p>
             </div>
-            <div className="flex items-center ">
-              <FaCheckCircle />
-              <p className="ml-3">Free Estimates</p>
+            <div className="flex items-center">
+              <FaCheckCircle className="text-green-500" />
+              <p className="ml-3">24/7 Customer Support</p>
             </div>
           </div>
         </div>
@@ -182,4 +224,5 @@ const WorkProcess = () => {
     </div>
   );
 };
+
 export default home;

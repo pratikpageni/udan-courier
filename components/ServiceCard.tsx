@@ -5,7 +5,7 @@ const ServiceCard = ({ data }: { data: ServiceInterface }) => {
   return (
     <div className="flex-wrap shadow-lg border">
       <img
-        src="img/home/service-1.jpg"
+        src={data?.image}
         alt="photo"
         className="h-[16rem] object-cover "
       />
