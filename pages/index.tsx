@@ -74,45 +74,7 @@ const Tracker = () => {
           </div>
         </div>
       </div>
-     <style jsx>{`
-        @keyframes ride-updown {
-          0%, 100% {
-            transform: translateY(0);
-          }
-          50% {
-            transform: translateY(-15px);
-          }
-        }
-        .scooter-updown-animation {
-          animation: ride-updown 2s ease-in-out infinite;
-        }
-        /* Wind effect background setup */
-        .wind-effect {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          pointer-events: none;
-          overflow: hidden;
-          z-index: 1;
-          background: repeating-linear-gradient(
-            45deg,
-            rgba(255 255 255 / 0.07),
-            rgba(255 255 255 / 0.07) 2px,
-            rgba(255 255 255 / 0.15) 4px
-          );
-          animation: wind-move 6s linear infinite;
-        }
-        @keyframes wind-move {
-          0% {
-            background-position: 0 0;
-          }
-          100% {
-            background-position: 100px 0;
-          }
-        }
-      `}</style>
+    
     </div>
   );
 };

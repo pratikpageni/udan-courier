@@ -19,11 +19,11 @@ const navbar: NavbarInterface[]=[
         link:"/service",
 
     },
-    {
-        title:"Gallery",
-        link:"/gallery",
+    // {
+    //     title:"Gallery",
+    //     link:"/gallery",
 
-    },
+    // },
     {
         title:"Contact Us",
         link:"/contact",
