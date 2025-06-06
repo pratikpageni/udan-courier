@@ -25,16 +25,20 @@ const home = () => {
 };
 
 const Tracker = () => {
-  const [tracknumber, setTracknumber] = useState<number>(Number);
-  const [show, setShow] = useState<boolean>(false);
+  const [tracknumber, setTracknumber] = useState<string>("");
   const [fadeIn, setFadeIn] = useState<boolean>(false);
 
   useEffect(() => {
-    // Trigger fade-in animation on component mount
     setFadeIn(true);
   }, []);
 
-  const track = () => {};
+  const track = () => {
+    if (tracknumber.trim()) {
+      const url = `https://parcelsapp.com/en/tracking/${tracknumber}`;
+      window.open(url, "_blank"); // Opens in a new tab
+    }
+  };
+
   return (
     <div className={`transition-opacity duration-1000 ${fadeIn ? "opacity-100" : "opacity-0"}`}>
       <div className="bg-[url('/img/home/home.jpg')] bg-cover bg-center w-full md:h-[85vh] h-[70vh]">
@@ -44,24 +48,19 @@ const Tracker = () => {
               Track Your Package
             </h1>
             <div className="bg-white px-4 py-2 rounded-lg w-full mt-10 flex gap-x-2">
-              <img
-                src="img/home/tracking.png"
-                alt="logo"
-                className="h-[32px]"
-              />
+              <img src="img/home/tracking.png" alt="logo" className="h-[32px]" />
               <input
-                onChange={(event) => setTracknumber(event.target.valueAsNumber)}
-                type="number"
+                onChange={(event) => setTracknumber(event.target.value)}
+                type="text"
                 placeholder="Enter the tracking number"
                 className="w-full px-2 outline-none"
               />
               <button
-                onClick={() => setShow(true)}
+                onClick={track}
                 className="bg-brand-color px-3 py-1 rounded-xl text-white"
               >
                 Track
               </button>
-              {show && <ShipmentStatus setShow={setShow} />}
             </div>
 
             <div className="justify-center flex">
@@ -74,10 +73,10 @@ const Tracker = () => {
           </div>
         </div>
       </div>
-    
     </div>
   );
 };
+
 
 const Experience = () => {
   return (

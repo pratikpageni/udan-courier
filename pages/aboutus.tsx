@@ -77,7 +77,7 @@ const Mission = () => {
           <div className="gap-y-6 md:w-[60%]">
             <p>
               We aim to simplify logistics for our customers by offering fast,
-              secure, and cost-effective delivery solutions. Whether it's a
+              secure, and cost-effective delivery solutions. Whether its a
               same-day parcel or international shipment, our mission is to
               ensure every package reaches its destination safely and on time.
               We continuously strive to innovate and exceed customer
@@ -139,8 +139,8 @@ const Message = () => {
           <p className="text-center ">
             “We started this company with a single goal in mind — to make
             delivery services faster, easier, and more accessible for everyone.
-            Today, I’m proud to see how far we've come. But our journey doesn't
-            end here. We’re committed to growing with our customers and
+            Today, I am proud to see how far we have come. But our journey doesnt
+            end here. We are committed to growing with our customers and
             continuing to improve how the world ships and receives goods.”
           </p>
 
