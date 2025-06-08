@@ -1,17 +1,17 @@
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 export const socialData = [
   {
-    link: "https://www.facebook.com/idealcourier.com.np",
+    link: "#",
     name: "facebook",
     icon: <FaFacebook className="text-black" size={25} />,
   },
   {
-    link: "https://instagram.com/idealexpress1?igshid=ZDc4ODBmNjlmNQ==",
+    link: "#",
     name: "instagram",
     icon: <FaInstagram size={25} />,
   },
   {
-    link: "https://twitter.com/idealcourier?t=b9YFPSC5UKQh5fOST0_mBw&s=09",
+    link: "#",
     name: "twitter",
     icon: <FaTwitter size={25} />,
   },
