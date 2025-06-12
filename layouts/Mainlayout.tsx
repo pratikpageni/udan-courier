@@ -1,8 +1,11 @@
 import Footer from "@/components/Footer";
 import { SocialMedia } from "@/components/MediaIcon";
 import Navbar from "@/components/Navbar";
+import SocialGroup from "@/components/SocialGroup";
+import { socialData } from "@/data/social.data";
 import Head from "next/head";
 import React from "react";
+import { FaInstagram } from "react-icons/fa";
 
 interface LayoutProps {
   title?: string;
@@ -22,6 +25,7 @@ const Mainlayout = ({ title, children }: LayoutProps) => {
       </div>
         {children}
         <Footer />
+        <SocialGroup />
       </main>
     </>
   );

@@ -18,11 +18,6 @@ const Footer = () => {
           <Link href="/aboutus" className="hover:underline text-brand-color2 ">
             Readmore..
           </Link>
-          <div className=" flex items-center justify-center md:justify-start gap-x-3 text-3xl text-brand-color2 mt-2">
-            <CiFacebook />
-            <CiTwitter />
-            <CiInstagram />
-          </div>
         </div>
         <div className="md:w-1/6 hidden md:block">
           <h1 className="text-lg font-bold mb-8 uppercase relative after:absolute after:h-1 after:w-9 after:bg-brand-color2 after:-bottom-3 after:left-0 ">
