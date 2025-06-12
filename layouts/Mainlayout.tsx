@@ -25,7 +25,7 @@ const Mainlayout = ({ title, children }: LayoutProps) => {
       </div>
         {children}
         <Footer />
-        <SocialGroup />
+        {/* <SocialGroup /> */}
       </main>
     </>
   );

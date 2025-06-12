@@ -540,10 +540,6 @@ video {
   right: -18px;
 }
 
-.bottom-\[10rem\] {
-  bottom: 10rem;
-}
-
 .right-0 {
   right: 0px;
 }
@@ -582,10 +578,6 @@ video {
 
 .z-10 {
   z-index: 10;
-}
-
-.z-50 {
-  z-index: 50;
 }
 
 .z-50 {
