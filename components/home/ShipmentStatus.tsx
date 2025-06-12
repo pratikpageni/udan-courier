@@ -26,7 +26,7 @@ const ShipmentStatus = ({
         </div>
         <div className="px-5 pb-5">
           <div className="flex justify-between items-center">
-            <img src="/img/logo.png" alt="logo" className="h-16 bg-cover" />
+            <img src="/img/logo2.png" alt="logo" className="h-16 bg-cover" />
             <button className="px-4 h-10 bg-brand-color text-white font-bold rounded-lg">
               Print
             </button>

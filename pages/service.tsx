@@ -25,7 +25,7 @@ const service = () => {
         <Heading title="Our Service" />
         <p className="mt-6 mb-10">
           We specialize in providing comprehensive delivery solutions tailored
-          to meet the unique needs of Nepal’s diverse geography and growing
+          to meet the unique needs of Nepal diverse geography and growing
           economy. Whether you need urgent same-day delivery within cities like
           Kathmandu, Pokhara, or Biratnagar, or reliable shipments to remote
           mountain regions, our nationwide network ensures your packages arrive

@@ -56,7 +56,7 @@ const History = () => {
       <div className="md:w-[40%]">
         <div className="border-[8px] border-white shadow-2xl">
           <img
-            src="/img/aboutus/history.jpg"
+            src="/img/aboutus/history-pic.jpeg"
             alt=""
             className="w-full h-[20rem] object-cover"
           />
@@ -87,7 +87,7 @@ const Mission = () => {
           <div className="md:w-[40%]">
             <div className="border-[8px] border-white shadow-2xl mt-5 md:-mt-5">
               <img
-                src="/img/aboutus/history.jpg"
+                src="/img/aboutus/mission-pic.jpeg"
                 alt=""
                 className="w-full md:h-[8rem] h-[20rem]  object-cover"
               />
@@ -113,7 +113,7 @@ const Mission = () => {
           <div className="md:w-[40%]">
             <div className="border-[8px] border-white shadow-2xl mt-5 md:-mt-5">
               <img
-                src="/img/aboutus/history.jpg"
+                src="/img/aboutus/value.jpeg"
                 alt=""
                 className="md:w-full md:h-[8rem] object-cover h-[20rem] "
               />
@@ -129,7 +129,7 @@ const Message = () => {
   return (
     <div>
       <div className="mb-8">
-        <Heading title="A MESSAGE FROM OUR FOUNDER & CEO" />
+        <Heading title="About Us" />
       </div>
       <div className="md:flex gap-x-16 items-center grid grid-cols-1 ">
         <div className="md:w-[60%] bg-gray-300 md:px-16 px-5 py-8  order-last md:order-first ">
@@ -137,22 +137,26 @@ const Message = () => {
             <ImQuotesLeft size={50} />
           </div>
           <p className="text-center ">
-            “We started this company with a single goal in mind — to make
-            delivery services faster, easier, and more accessible for everyone.
-            Today, I am proud to see how far we have come. But our journey doesnt
-            end here. We are committed to growing with our customers and
-            continuing to improve how the world ships and receives goods.”
+            “Udaan Courier and Cargo service is a trusted and reliable logistics
+            service based in Nepal, specializing in fast, affordable, and
+            time-definite deliveries for personal, professional, and commercial
+            parcels. Committed to customer satisfaction, Udaan offers same-day
+            collection and delivery, cost-effective rates, and real-time
+            tracking to ensure seamless and secure shipments. With a focus on
+            safety and efficiency, the company prides itself on providing
+            perfect service, making it a preferred choice for courier and cargo
+            needs in Nepal and beyond”
           </p>
 
-          <div className="text-center mt-8 border-t pt-8">
+          {/* <div className="text-center mt-8 border-t pt-8">
             <p className="font-bold text-xl text-brand-color">Pratik Pageni</p>
             <p className="text-sm">Founder & CEO</p>
-          </div>
+          </div> */}
         </div>
         <div className="md:w-[40%] md:mb-0 mb-5">
           <div className="border-[6px] border-gray-300 md:shadow-2xl ">
             <img
-              src="/img/aboutus/ceo.jpg"
+              src="/img/aboutus/about.jpeg"
               alt=""
               className="w-full h-[20rem] object-cover"
             />

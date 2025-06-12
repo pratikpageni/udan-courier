@@ -2,6 +2,7 @@ import Banner from "@/components/Banner";
 import Heading from "@/components/home/Heading";
 import Mainlayout from "@/layouts/Mainlayout";
 import React from "react";
+import { FaFacebook, FaTiktok, FaWhatsapp } from "react-icons/fa";
 import { MdCall, MdLocationOn, MdMail } from "react-icons/md";
 
 const contact = () => {
@@ -23,10 +24,10 @@ const contact = () => {
       <div className="md:p-16 p-5">
         <Heading title="Get in Touch" />
         <p className="mt-6 mb-10">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio ullam
-          consectetur sint? Quidem iure quisquam, beatae quos voluptatum soluta
-          voluptate quasi nostrum. Obcaecati iste officiis voluptas quos tempore
-          dolorem pariatur.
+          Have questions or need assistance? Udan is here to help. Whether its
+          tracking a delivery, scheduling a pickup, or learning more about our
+          courier services, our team is ready to support you. Contact us anytime
+          — we would love to hear from you!
         </p>
         <div className="md:flex gap-x-10 md:mb-16 mb-8">
           <div className="md:w-[35%]">
@@ -34,19 +35,60 @@ const contact = () => {
               <div className="border-b">
                 <Location
                   icon={<MdLocationOn size={30} />}
-                  details="Lorance Road 542B,A 7 Sector 10,Wordwide Country"
+                  details="Gathaghar, Bhaktapur, Nepal"
                 />
               </div>
               <div className="border-b">
                 <Location
                   icon={<MdMail size={30} />}
-                  details="info@Udan.com.np, help@Udan.com.np"
+                  details="udaancourier10@gmail.com help@Udan.com.np"
                 />
               </div>
-              <div className="">
+              <div className="border-b">
                 <Location
                   icon={<MdCall size={30} />}
-                  details="987654321, 987654321"
+                  details="+977-9808958655/9701127863"
+                />
+              </div>
+              <div className="flex hidden">
+                <Location
+                  icon={
+                    <a
+                      href="https://www.facebook.com/profile.php?id=61576839737739"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Facebook"
+                    >
+                      <FaFacebook size={30} />
+                    </a>
+                  }
+                  // details="+977-9808958655/9701127863"
+                />
+                <Location
+                  icon={
+                    <a
+                      href="https://wa.me/9701127863"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="WhatsApp"
+                    >
+                      <FaWhatsapp size={30} />
+                    </a>
+                  }
+                  // details="+977-9808958655/9701127863"
+                />
+                <Location
+                  icon={
+                    <a
+                      href="https://www.tiktok.com/@udaancourier?_t=ZS-8x4zcZPtviE&_r=1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Instagram"
+                    >
+                      <FaTiktok size={30} />
+                    </a>
+                  }
+                  // details="+977-9808958655/9701127863"
                 />
               </div>
             </div>
@@ -83,7 +125,7 @@ const Location = ({
   details,
 }: {
   icon: React.ReactNode;
-  details: string;
+  details?: string;
 }) => {
   return (
     <div className="flex m-5 gap-x-3 items-center justify-between">

@@ -4,12 +4,20 @@ import ShipmentStatus from "@/components/home/ShipmentStatus";
 import WorkCard from "@/components/home/WorkCard";
 import Mainlayout from "@/layouts/Mainlayout";
 import React, { useState, useEffect } from "react";
-import { FaCheckCircle } from "react-icons/fa";
+import { CiFacebook, CiInstagram } from "react-icons/ci";
+import {
+  FaCheckCircle,
+  FaFacebook,
+  FaInstagram,
+  FaTiktok,
+  FaWhatsapp,
+} from "react-icons/fa";
 import { HiArrowLongRight } from "react-icons/hi2";
 
 const home = () => {
   return (
     <Mainlayout>
+      
       <Tracker />
       <div className="py-20 grid grid-cols-1 gap-y-16">
         <div className="md:px-16 px-5 ">
@@ -23,6 +31,8 @@ const home = () => {
     </Mainlayout>
   );
 };
+
+
 
 const Tracker = () => {
   const [tracknumber, setTracknumber] = useState<string>("");
@@ -40,15 +50,23 @@ const Tracker = () => {
   };
 
   return (
-    <div className={`transition-opacity duration-1000 ${fadeIn ? "opacity-100" : "opacity-0"}`}>
-      <div className="bg-[url('/img/home/home.jpg')] bg-cover bg-center w-full md:h-[85vh] h-[70vh]">
+    <div
+      className={`transition-opacity duration-1000 ${
+        fadeIn ? "opacity-100" : "opacity-0"
+      }`}
+    >
+      <div className="bg-[url('/img/home/homenew.jpg')] bg-cover bg-center w-full md:h-[85vh] h-[40vh]">
         <div className="md:p-24 p-10">
           <div className="md:w-[40%]">
-            <h1 className="font-bold text-5xl text-brand-color stroke-white">
+            <h1 className="font-bold md:text-5xl text-4xl text-brand-color stroke-white">
               Track Your Package
             </h1>
             <div className="bg-white px-4 py-2 rounded-lg w-full mt-10 flex gap-x-2">
-              <img src="img/home/tracking.png" alt="logo" className="h-[32px]" />
+              <img
+                src="img/home/tracking.png"
+                alt="logo"
+                className="h-[32px] "
+              />
               <input
                 onChange={(event) => setTracknumber(event.target.value)}
                 type="text"
@@ -67,7 +85,7 @@ const Tracker = () => {
               <img
                 src="img/home/scooter.png"
                 alt="scooter photo"
-                className="object-cover md:h-[45vh] scooter-updown-animation"
+                className="object-cover md:h-[45vh] hidden md:block scooter-updown-animation"
               />
             </div>
           </div>
@@ -77,15 +95,14 @@ const Tracker = () => {
   );
 };
 
-
 const Experience = () => {
   return (
     <div>
       <div className="md:flex">
         <div className="md:w-[65%]">
           <div className="flex items-center">
-            <h1 className="text-[110px] font-bold text-brand-color2">20</h1>
-            <img src="img/home/trolly.png" alt="trolly" />
+            <h1 className="md:text-[110px] text-8xl font-bold text-brand-color2">5+</h1>
+            <img className="md:w-fit w-28" src="img/home/trolly.png" alt="trolly" />
           </div>
           <Heading title="YEARS OF EXPERIENCE" />
           <p className="mt-8">
@@ -173,7 +190,7 @@ const WorkProcess = () => {
   return (
     <div className="py-10 px-16 bg-brand-color2 text-white">
       <h1 className="text-center text-3xl font-bold mb-10">Our Work Process</h1>
-      <div className="md:flex gap-y-3 justify-between items-center px-16">
+      <div className="md:flex grid md:gap-y-3 gap-y-6 justify-between items-center px-16">
         <WorkCard title="Book your Service" icon="booking.png" />
         <HiArrowLongRight color="white" size={40} className="hidden md:block" />
         <WorkCard title="Pack Your Goods" icon="package.png" />

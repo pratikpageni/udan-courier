@@ -1,4 +1,5 @@
 import navbar from "@/constraints/navbar.data";
+import serviceData from "@/constraints/servicedata.data";
 import Link from "next/link";
 import React from "react";
 import { CiFacebook, CiTwitter, CiInstagram } from "react-icons/ci";
@@ -9,12 +10,10 @@ const Footer = () => {
     <div className="bg-brand-color text-white   ">
       <div className="md:flex gap-x-20 px-16 p-6 ">
         <div className="grid gap-y-3 md:w-2/6 pr-6">
-          <img src="/img/logo.png" alt="logo" className="h-10" />
+          <img src="/img/logo2.png" alt="logo" className="h-10" />
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Reprehenderit ex nostrum voluptate facilis. Animi delectus optio
-            molestiae possimus quam natus repellendus nemo nobis, quo temporibus
-            quidem sed nesciunt eligendi voluptate.
+            © 2025 Udan Courier. Fast. Reliable. Everywhere. | Delivering your
+            parcels with care and speed across the nation.
           </p>
           <Link href="/aboutus" className="hover:underline text-brand-color2 ">
             Readmore..
@@ -44,10 +43,10 @@ const Footer = () => {
             Our Service
           </h1>
           <ul className="gap-y-2 grid">
-            {[0, 0, 0, 0, 0].map((data, index) => {
+            {serviceData.slice(0,5).map((data, index) => {
               return (
                 <li key={index} className="hover:text-brand-color2">
-                  Courier
+                  {data.title}
                 </li>
               );
             })}
@@ -59,20 +58,20 @@ const Footer = () => {
           </h1>
           <div className="flex gap-x-4">
             <MdLocationOn className="text-[40px] text-brand-color2" />
-            <p>110, Lorance Road Sanewadi, Badlapur (W), Thane, Melbourne.</p>
+            <p>Gathghar, Bhaktapur, Nepal</p>
           </div>
           <div className="flex gap-x-4 items-center mt-5">
             <MdCall className="text-2xl text-brand-color2" />
-            <span>+977-986365136</span>
+            <span>+977-9808958655/9701127863</span>
           </div>
           <div className="flex  items-center mt-5 gap-x-4">
             <MdEmail className="text-2xl text-brand-color2" />
-            <span>pagenipratik@gmail.com</span>
+            <span>udaancourier10@gmail.com</span>
           </div>
         </div>
       </div>
-      <div>
-        <img src="/img/ftr-bg.png" alt="img" className="opacity-30" />
+      <div className="">
+        <img src="/img/ftr-bg.png" alt="img" className="opacity-30 md:-mt-20" />
         <Link href="/" className="justify-center flex opacity-80">
           Develop by: Pratik Pageni and Jit Bdr Rana
         </Link>

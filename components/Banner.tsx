@@ -19,7 +19,8 @@ const Banner = ({
     <div>
       <div
         style={{
-          backgroundImage: `url(${bgImage || "/img/home/home.jpg"})`,
+          backgroundImage: `url(${bgImage || "/img/home/homenew.jpg"})`,
+          // backgroundImage: "url(/img/home/homenew.jpg)",
           backgroundRepeat: "no-repeat",
         }}
         className=" text-white  md:min-h-[35vh]  min-h-[20vh] bg-cover bg-no-repeat"
